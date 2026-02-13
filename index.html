@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal English Mastery | USA Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="us-stars-overlay"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Animal <span class="accent">English</span></h1>
+            <p>MASTERY PROGRAM • USA EDITION</p>
+        </header>
+
+        <main class="quiz-container">
+            <div class="progress-section">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <span id="progress-text">0 / 41</span>
+            </div>
+
+            <div class="score-stats">
+                <div class="stat-item correct">
+                    <span class="stat-label">Acertos</span>
+                    <span id="hits-count" class="stat-value">0</span>
+                </div>
+                <div class="stat-item wrong">
+                    <span class="stat-label">Erros</span>
+                    <span id="misses-count" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <div class="card" id="quiz-card">
+                <div class="animal-display">
+                    <div class="image-wrapper">
+                        <img id="animal-image" src="" alt="Animal">
+                    </div>
+                    <h2 id="portuguese-name">Loading...</h2>
+                    <div id="translation-box" class="translation-box hidden">
+                        <span id="translation-text"></span>
+                    </div>
+                    <button id="hint-btn" class="hint-btn">Show Translation</button>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-group">
+                        <label for="english-input">Enter English Name</label>
+                        <input 
+                            type="text" 
+                            id="english-input" 
+                            placeholder="..." 
+                            autocomplete="off" 
+                            autofocus
+                        >
+                    </div>
+                </div>
+
+                <div class="feedback" id="feedback"></div>
+
+                <button id="submit-btn" class="primary-btn">Verify Entry</button>
+            </div>
+
+            <div class="results hidden" id="results-screen">
+                <h2>CHAMPION! 🏆</h2>
+                <p>CERTIFIED MASTERY OBTAINED</p>
+                <div class="score-display">
+                    <span id="final-score">100%</span>
+                </div>
+                <button onclick="playAgain()" class="secondary-btn">New Challenge</button>
+            </div>
+
+            <div class="history-section" id="history-section">
+                <div class="history-header">
+                    <h3>Mastered Collection</h3>
+                    <button id="reset-btn" class="reset-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg>
+                        RESET PROGRESS
+                    </button>
+                </div>
+                <div class="history-list" id="history-list">
+                    <!-- Mastered items appear here -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>PREMIUM LEARNING EXPERIENCE • EST. 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
